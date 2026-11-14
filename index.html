@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="Garage — a barbershop with Japanese character. Haircuts, shaves and grooming in an atmosphere of dark wood and calm.">
+  <title>Garage — Barbershop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Manrope:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20261114.8">
+</head>
+<body>
+  <canvas id="petals" aria-hidden="true"></canvas>
+
+  <header class="nav" id="top">
+    <a class="brand brand--hero" href="#top" aria-label="Garage, back to top">
+      <span class="brand__word">GARAG<span class="brand__mark"><i></i><b></b></span></span>
+      <small>BARBERSHOP</small>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="is-active" href="#top">Home</a><a href="#services">Services</a><a href="#space">About</a><a href="#booking">Booking</a><a href="#contacts">Contacts</a>
+    </nav>
+    <button class="nav__book js-book">Book now <span>↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__photo" role="img" aria-label="Garage barbershop interior"></div>
+      <div class="hero__shade"></div>
+      <img class="hero-tree hero-tree--left" src="assets/sakura-left.png" alt="" aria-hidden="true">
+      <img class="hero-tree hero-tree--right" src="assets/sakura-right.png" alt="" aria-hidden="true">
+      <canvas id="sakuraCanvas" class="sakura-canvas" aria-hidden="true"></canvas>
+      <canvas id="cloudCanvas" class="cloud-canvas" aria-hidden="true"></canvas>
+      <div class="cloud-fallback" aria-hidden="true"></div>
+      <div class="hero__content reveal">
+        <h1>GARAGE</h1>
+        <p class="hero__subtitle">BARBERSHOP</p>
+        <p class="hero__tagline">More than a haircut.<br>A way of life.</p>
+        <button class="hero__book js-book">Book a session <span>→</span></button>
+      </div>
+      <div class="hero__scroll"><i>↓</i><span>SCROLL</span></div>
+    </section>
+
+    <section class="manifest reveal">
+      <p class="section-no">01 / APPROACH</p>
+      <blockquote>NOT JUST A HAIRCUT.<br><span>YOUR RESET RITUAL.</span></blockquote>
+      <p class="manifest__copy">At Garage, we have stripped away the noise. What remains is attention to form, a confident hand and time that belongs entirely to you.</p>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-head reveal"><p class="section-no">02 / SERVICES</p><h2>CHOOSE<br><span>YOUR RITUAL</span></h2></div>
+      <div class="service-list">
+        <article class="service reveal" data-service="Men's Haircut"><span>01</span><div><h3>Men's Haircut</h3><p>Consultation, wash, haircut and styling</p></div><b>€25</b><button class="service__plus" aria-label="Choose men's haircut">+</button></article>
+        <article class="service reveal" data-service="Haircut + Beard"><span>02</span><div><h3>Haircut + Beard</h3><p>A complete look: shape, contours and care</p></div><b>€38</b><button class="service__plus" aria-label="Choose haircut and beard">+</button></article>
+        <article class="service reveal" data-service="Royal Shave"><span>03</span><div><h3>Royal Shave</h3><p>Hot towel, straight razor and aftercare</p></div><b>€22</b><button class="service__plus" aria-label="Choose royal shave">+</button></article>
+        <article class="service reveal" data-service="Gray Blending"><span>04</span><div><h3>Gray Blending</h3><p>A natural tone for hair or beard</p></div><b>€18</b><button class="service__plus" aria-label="Choose gray blending">+</button></article>
+      </div>
+    </section>
+
+    <section class="space" id="space">
+      <div class="space__image reveal"><img src="assets/garage-interior.png" alt="Dark Garage interior with wooden panels" loading="lazy"><span>GARAGE / INSIDE</span></div>
+      <div class="space__copy reveal"><p class="section-no">03 / SPACE</p><h2>SILENCE.<br>WOOD.<br><span>PRECISION.</span></h2><p>A place where industrial texture meets Japanese calm. No one rushes you here — everything is tuned to you.</p><a href="#booking" class="text-link js-book">Reserve a chair <span>↗</span></a></div>
+    </section>
+
+    <section class="masters" id="masters">
+      <div class="section-head reveal"><p class="section-no">04 / STYLES</p><h2>CHOOSE YOUR<br><span>FORM</span></h2></div>
+      <div class="master-grid">
+        <article class="master reveal"><div class="master__portrait"><img src="assets/haircut-textured-crop.png" alt="Men's textured crop with a low fade" loading="lazy"></div><h3>Textured Crop</h3><p>Low fade • natural texture</p></article>
+        <article class="master reveal"><div class="master__portrait"><img src="assets/haircut-classic-fade.png" alt="Men's classic fade haircut" loading="lazy"></div><h3>Classic Fade</h3><p>Clean contour • smooth transition</p></article>
+        <article class="master reveal"><div class="master__portrait"><img src="assets/haircut-long-form.png" alt="Men's medium-length haircut with natural volume" loading="lazy"></div><h3>Long Form</h3><p>Medium length • natural volume</p></article>
+      </div>
+    </section>
+
+    <section class="booking" id="booking">
+      <div class="booking__dragons" aria-hidden="true">
+        <img class="booking-dragon booking-dragon--top" src="assets/dragon-booking-top.png" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="booking-dragon booking-dragon--bottom" src="assets/dragon-booking-bottom.png" alt="" loading="lazy" decoding="async" draggable="false">
+      </div>
+      <div class="booking__intro reveal"><p class="section-no">05 / BOOKING</p><h2>YOUR CHAIR<br><span>AWAITS</span></h2><p>Leave your details — our administrator will confirm your preferred time.</p></div>
+      <form class="booking__form reveal" id="bookingForm">
+        <label>Name<input name="name" required autocomplete="name" placeholder="How should we address you?"></label>
+        <label>Phone<input name="phone" required inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
+        <label>Email<input type="email" name="email" required inputmode="email" autocomplete="email" placeholder="you@example.com"></label>
+        <label>Service<select name="service" id="serviceSelect"><option>Men's Haircut</option><option>Haircut + Beard</option><option>Royal Shave</option><option>Gray Blending</option></select></label>
+        <div class="form-row"><label>Date<input type="date" name="date" id="dateInput" required></label><label>Time<select name="time"><option>10:00</option><option>12:30</option><option>15:00</option><option>17:30</option><option>20:00</option></select></label></div>
+        <button type="submit" class="submit-btn">Send request <span>↗</span></button>
+        <p class="form-note" id="formStatus" aria-live="polite">By submitting, you consent to the processing of your personal data.</p>
+      </form>
+      <div class="success" id="success" aria-live="polite"><span>✓</span><h3>Your chair is reserved</h3><p id="successText"></p><button type="button" id="closeSuccess">Back to site</button></div>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <a class="brand brand--footer" href="#top"><span class="brand__mark"><i></i><b></b></span><span>GARAGE</span></a>
+    <div><p>Daily 10:00–22:00</p><p>Moscow • +7 999 000-00-00</p></div>
+    <div class="socials"><a href="#">Telegram</a><a href="#">VK</a></div>
+    <p class="copyright">© 2026 GARAGE BARBERSHOP</p>
+  </footer>
+  <script src="trees.js?v=20261114.2"></script>
+  <script src="clouds.js?v=20261114.2"></script>
+  <script src="app.js?v=20261114.6"></script>
+</body>
+</html>
