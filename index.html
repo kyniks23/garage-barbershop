@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Manrope:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20261114.8">
+    <link rel="stylesheet" href="styles.css?v=20261118.2">
 </head>
 <body>
   <canvas id="petals" aria-hidden="true"></canvas>
@@ -79,12 +79,21 @@
         <img class="booking-dragon booking-dragon--bottom" src="assets/dragon-booking-bottom.png" alt="" loading="lazy" decoding="async" draggable="false">
       </div>
       <div class="booking__intro reveal"><p class="section-no">05 / BOOKING</p><h2>YOUR CHAIR<br><span>AWAITS</span></h2><p>Leave your details — our administrator will confirm your preferred time.</p></div>
-      <form class="booking__form reveal" id="bookingForm">
+      <form class="booking__form reveal" id="bookingForm" data-timezone="Europe/Dublin">
         <label>Name<input name="name" required autocomplete="name" placeholder="How should we address you?"></label>
-        <label>Phone<input name="phone" required inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
+        <label>Phone
+          <span class="phone-field">
+            <select name="country" id="countrySelect" aria-label="Country and calling code">
+              <option value="IE" selected>Ireland (+353)</option>
+            </select>
+            <input name="phone" required inputmode="tel" autocomplete="tel" placeholder="087 123 4567" aria-describedby="phoneHelp">
+          </span>
+          <small class="field-help" id="phoneHelp">Select a country and enter a local or international phone number.</small>
+        </label>
         <label>Email<input type="email" name="email" required inputmode="email" autocomplete="email" placeholder="you@example.com"></label>
         <label>Service<select name="service" id="serviceSelect"><option>Men's Haircut</option><option>Haircut + Beard</option><option>Royal Shave</option><option>Gray Blending</option></select></label>
         <div class="form-row"><label>Date<input type="date" name="date" id="dateInput" required></label><label>Time<select name="time"><option>10:00</option><option>12:30</option><option>15:00</option><option>17:30</option><option>20:00</option></select></label></div>
+        <input type="hidden" name="timeZone" value="Europe/Dublin">
         <button type="submit" class="submit-btn">Send request <span>↗</span></button>
         <p class="form-note" id="formStatus" aria-live="polite">By submitting, you consent to the processing of your personal data.</p>
       </form>
@@ -94,12 +103,13 @@
 
   <footer id="contacts">
     <a class="brand brand--footer" href="#top"><span class="brand__mark"><i></i><b></b></span><span>GARAGE</span></a>
-    <div><p>Daily 10:00–22:00</p><p>Moscow • +7 999 000-00-00</p></div>
-    <div class="socials"><a href="#">Telegram</a><a href="#">VK</a></div>
+    <div><p>Contact details coming soon.</p><p>Verified location and phone information will be added here.</p></div>
+    <div class="socials"><span>Contact information pending confirmation</span></div>
     <p class="copyright">© 2026 GARAGE BARBERSHOP</p>
   </footer>
   <script src="trees.js?v=20261114.2"></script>
   <script src="clouds.js?v=20261114.2"></script>
-  <script src="app.js?v=20261114.6"></script>
+  <script src="libphonenumber-min.js?v=1.13.16"></script>
+  <script src="app.js?v=20261118.2"></script>
 </body>
 </html>
